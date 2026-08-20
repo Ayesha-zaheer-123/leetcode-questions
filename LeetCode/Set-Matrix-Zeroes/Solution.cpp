@@ -1,7 +1,25 @@
-[[1,1,1],[1,0,1],[1,1,1]]
-[[0,1,2,0],[3,4,5,2],[1,3,1,5]]
-[[1],[0]]
-[[0,1,1],[1,1,1],[1,0,0]]
-[[-4,-2147483648,6,-7,0],[-8,6,-8,-6,0],[2147483647,2,-9,-6,-10]]
-[[2147483647],[2],[3]]
-[[1,2,3,4],[5,0,7,8],[0,10,11,12],[13,14,15,0]]
+class Solution {
+public:
+    void setZeroes(vector<vector<int>>& matrix) {
+          int m = matrix.size();     
+    int n = matrix[0].size();   
+    int maxSize = max(m, n);
+    vector<vector<bool>> marker(2, vector<bool>(maxSize, true));
+    for (int i = 0; i < m; i++) {
+        for (int j = 0; j < n; j++) {
+            if (matrix[i][j] == 0) {
+                marker[0][i] = false;  
+                marker[1][j] = false;
+            }
+        }
+    }
+    for (int i = 0; i < m; i++) {
+        for (int j = 0; j < n; j++) {
+            if (marker[0][i] == false || marker[1][j] == false) {
+                matrix[i][j] = 0;
+            }
+        }
+    }
+
+    }
+};
