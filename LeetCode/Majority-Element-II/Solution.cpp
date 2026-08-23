@@ -27,15 +27,17 @@
 27            count2--;
 28        }
 29    }
-30count1 = 0;
-31count2 = 0;
-32for(int i = 0; i < n; i++) {
-33    if(nums[i] == el1) count1++;
-34    else if(nums[i] == el2) count2++;
-35}
-36
-37if(count1 > n/3) ans.push_back(el1);
-38if(count2 > n/3) ans.push_back(el2);
-39        return ans;
-40            }
-41};
+30    count1=0;
+31    count2=0;
+32    for(int i=0;i<n;i++) {
+33        if(nums[i]==el1) {
+34            count1++;
+35        }else if(nums[i]==el2) {
+36            count2++;
+37        }
+38    }
+39if(count1 > n/3) ans.push_back(el1);
+40if(count2 > n/3) ans.push_back(el2);
+41        return ans;
+42            }
+43};
