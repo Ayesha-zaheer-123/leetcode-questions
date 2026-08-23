@@ -10,17 +10,17 @@
 10        for(int i=0;i<n;i++) {
 11            int count=0;
 12            if(ans.size()==0||ans[0]!=nums[i]) {
-13            for(int j=0;j<n;j++) {
-14                if(nums[i]==nums[j]) {
-15                    count++;
-16                } 
-17            }
-18                
-19                if(count>n/3) {
-20                    ans.push_back(nums[i]);
-21                }
-22                if(ans.size()==2) break;
-23            }
+13
+14            for(int j=i;j<n;j++) {
+15                if(nums[i]==nums[j]) {
+16                    count++;
+17                } 
+18            }
+19            }
+20                if(count>n/3) {
+21                    ans.push_back(nums[i]);
+22                }
+23                if(ans.size()==2) break;
 24        }
 25        return ans;
 26            }
