@@ -1,6 +1,6 @@
 # Majority Element II
 
-Can you solve this real interview question? Majority Element II - Given an integer array of size n, find all elements that appear more than ⌊n / 3⌋ times.
+Given an integer array of size n, find all elements that appear more than ⌊n / 3⌋ times.
 
  
 
