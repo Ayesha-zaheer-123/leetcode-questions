@@ -6,22 +6,17 @@
 6    int answer = nums[0];
 7    for(int i = 1; i < nums.size(); i++) {
 8        int x = nums[i];
-9        int newPositive = max({
-10            x,
-11            x * positive,
-12            x * negative
-13        });
-14        int newNegative = min({
-15            x,
-16            x * positive,
-17            x * negative
-18        });
+9        int newpositive = max({
+10            x, x * positive,x * negative
+11        });
+12        int newnegative = min({
+13            x, x * positive,x * negative
+14        });
+15        positive = newpositive;
+16        negative = newnegative;
+17        answer = max(answer, positive);
+18    }
 19
-20        positive = newPositive;
-21        negative = newNegative;
-22        answer = max(answer, positive);
-23    }
-24
-25    return answer;
-26    }
-27};
+20    return answer;
+21    }
+22};
