@@ -10,7 +10,7 @@
 10if(nums[mid]==target) {
 11    ans=mid;
 12    return ans;
-13}else if(target>nums[mid]) {
+13}else if(nums[mid]<target) {
 14    low=mid+1;
 15}else{
 16    high=mid-1;
