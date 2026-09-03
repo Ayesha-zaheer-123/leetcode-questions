@@ -1,46 +1,12 @@
-class Solution {
-public:
-int findfirst(vector<int>&nums, int target) {
-int low=0;
-int n=nums.size();
-int high=n-1;
-int first=-1;
-while(low<=high) {
-    int mid=(low+high)/2;
-    if(nums[mid]==target) {
-first=mid;
-high=mid-1;
-    }else if(nums[mid]<target) {
-        low=mid+1;
-    }else{
-        high=mid-1;
-    }
-} 
- return first;
-}
-int findsecond(vector<int>&nums, int target) {
-int low=0;
-int n=nums.size();
-int high=n-1;
-int second=-1;
-while(low<=high) {
-    int mid=(low+high)/2;
-    if(nums[mid]==target) {
-second=mid;
-low=mid+1;
-    }else if(nums[mid]<target) {
-        low=mid+1;
-    }else{
-        high=mid-1;
-    }
-}
-    return second;
-}
-
-    vector<int> searchRange(vector<int>& nums, int target) {
-        int n=nums.size();
-       int firstelement=findfirst(nums,target);
-   int secondelement=findsecond(nums,target);
-return {firstelement,secondelement};
-    }
-};
+[]
+42
+[7,8,8,8,8,8,8,8,8,8,8,9]
+7
+[7,8,8,8,8,8,8,8,8,8,8,9]
+8
+[7,8,8,8,8,8,8,8,8,8,8,9]
+10
+[1,2,2,2,2,3,4,5,5,5,5,6,7,8,9,10,11,12,12,12,12,12,13]
+2
+[-999985131,-999953607,-999953607,-999915742,-999883817,-999849817,-999822901,-999815377,-999810801,-68594,-49967,20394,114012,999969829,999973689,999975494]
+-999953607
