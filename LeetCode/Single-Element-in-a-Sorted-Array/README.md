@@ -1,6 +1,6 @@
 # Single Element in a Sorted Array
 
-Can you solve this real interview question? Single Element in a Sorted Array - You are given a sorted array consisting of only integers where every element appears exactly twice, except for one element which appears exactly once.
+You are given a sorted array consisting of only integers where every element appears exactly twice, except for one element which appears exactly once.
 
 Return the single element that appears only once.
 
