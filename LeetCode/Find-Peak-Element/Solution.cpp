@@ -15,17 +15,24 @@
 15        if(nums[n-1]>nums[n-2]) {
 16            return n-1;
 17        }
-18        for(int i=0;i<n-1;i++) {
-19            if(i==0) {
-20                if(nums[i]>nums[i+1]) {
-21                    return 0;
-22                }
-23                continue;
-24            }
-25            if(nums[i]>nums[i-1]&&nums[i]>nums[i+1]) {
-26                ans=i;
-27            }
-28        }
-29        return ans;
-30    }
-31};
+18        int low=0;
+19        int high=n-2;
+20        while(low<=high) {
+21            if(low==0) {
+22                if(nums[low]>nums[low+1]) {
+23                    return low;
+24                }
+25            low=1;
+26            }
+27            int mid=(low+high)/2;
+28            if(nums[mid]>nums[mid-1]&&nums[mid]>nums[mid+1]) {
+29                return mid;
+30            }if(nums[mid]<nums[mid-1]) {
+31                high=mid-1;
+32            }else{
+33                low=mid+1;
+34            }
+35        }
+36        return -1;
+37    }
+38};
