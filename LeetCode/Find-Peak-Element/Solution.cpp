@@ -22,7 +22,7 @@
 22                if(nums[low]>nums[low+1]) {
 23                    return low;
 24                }
-25            low=1;
+25        low++;
 26            }
 27            int mid=(low+high)/2;
 28            if(nums[mid]>nums[mid-1]&&nums[mid]>nums[mid+1]) {
