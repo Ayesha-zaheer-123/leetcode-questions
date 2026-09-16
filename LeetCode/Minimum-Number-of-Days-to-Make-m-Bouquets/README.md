@@ -1,6 +1,8 @@
 # Minimum Number of Days to Make m Bouquets
 
-Can you solve this real interview question? Minimum Number of Days to Make m Bouquets - You are given an integer array bloomDay, an integer m and an integer k.
+## Problem Statement
+
+ You are given an integer array bloomDay, an integer m and an integer k.
 
 You want to make m bouquets. To make a bouquet, you need to use k adjacent flowers from the garden.
 
