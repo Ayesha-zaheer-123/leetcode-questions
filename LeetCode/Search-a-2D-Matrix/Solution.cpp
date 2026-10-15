@@ -1,14 +1,29 @@
-[[1], [3], [5], [7], [9], [11], [13], [15], [17], [19],    [21], [23], [25], [27], [29], [31], [33], [35], [37], [39],    [41], [43], [45], [47], [49], [51], [53], [55], [57], [59],    [61], [63], [65], [67], [69], [71], [73], [75], [77], [79],    [81], [83], [85], [87], [89], [91], [93], [95], [97], [99]]
-t: 3
-
-[[1],[3],[5],[6]]
-t: 3
-
-[[1, 3]]
-t: 3
-
-[[1, 3]]
-t: 2
-
-[[1]]
-t: 1
+ 
+class Solution {
+public:
+    bool searchMatrix(vector<vector<int>>& matrix, int target) {
+        if (matrix.empty() || matrix[0].empty()) {
+            return false;
+        }
+        int rows = (int)matrix.size();
+        int cols = (int)matrix[0].size();
+        int low = 0;
+        int high = rows * cols - 1;
+        while (low <= high) {
+            int mid = low + (high - low) / 2;
+            int row = mid / cols;
+            int col = mid % cols;
+            int current = matrix[row][col];
+            if (current == target) {
+                return true;
+            }
+            if (current < target) {
+                low = mid + 1;
+            } else {
+                high = mid - 1;
+            }
+        }
+        return false;
+    }
+};
+ 
