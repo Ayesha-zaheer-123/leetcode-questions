@@ -1,6 +1,5 @@
 # Find a Peak Element II
 
-[Problem](https://leetcode.com/problems/find-a-peak-element-ii/)
 
 Difficulty: Medium
 
