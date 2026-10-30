@@ -12,7 +12,6 @@ public:
                 col--;
             }else {
  row++;
-
             }
            
         }
